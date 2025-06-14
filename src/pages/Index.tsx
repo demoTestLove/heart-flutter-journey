@@ -64,7 +64,7 @@ const Index = () => {
               Em của quá khứ
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              Quá khứ trong có vẻ dễ thường hơn và ngây ngô hơn nhỉ?
+              Quá khứ trong có vẻ dễ thương hơn và ngây ngô hơn nhỉ?
             </p>
           </div>
 

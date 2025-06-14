@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Heart } from "lucide-react";
 
@@ -8,12 +7,12 @@ const HeartButton = () => {
 
   const handleHeartClick = () => {
     setShowMessage(true);
-    
+
     // Hide message after 2 seconds and show animated heart
     setTimeout(() => {
       setShowMessage(false);
       setShowAnimatedHeart(true);
-      
+
       // Hide animated heart after 3 seconds
       setTimeout(() => {
         setShowAnimatedHeart(false);
@@ -28,12 +27,13 @@ const HeartButton = () => {
         onClick={handleHeartClick}
         className="group relative bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
         style={{
-          clipPath: "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)"
+          clipPath:
+            "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
         }}
       >
-        <Heart 
-          className="text-white group-hover:animate-pulse" 
-          size={32} 
+        <Heart
+          className="text-white group-hover:animate-pulse"
+          size={32}
           fill="currentColor"
         />
       </button>
@@ -42,7 +42,7 @@ const HeartButton = () => {
       {showMessage && (
         <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg animate-fade-in">
           <p className="text-gray-800 font-semibold whitespace-nowrap">
-            Thank you for viewing! 💕
+            Buổi tối tốt lành ! 💕
           </p>
         </div>
       )}
