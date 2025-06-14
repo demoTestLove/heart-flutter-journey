@@ -45,13 +45,18 @@ const Index = () => {
         {/* Main Content Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {/* Love Story Card */}
-          <div className="backdrop-blur-lg bg-white/30 rounded-3xl p-8 shadow-xl border border-white/20 hover:transform hover:scale-105 transition-all duration-300 animate-fade-in">
-            <div className="mb-6">
+          <div className="backdrop-blur-lg bg-white/30 rounded-3xl p-8 shadow-xl border border-white/20 hover:transform hover:scale-105 transition-all duration-300 animate-fade-in group">
+            <div className="mb-6 relative overflow-hidden rounded-2xl">
               <img
                 src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop"
                 alt="Romantic setting"
-                className="w-full h-48 object-cover rounded-2xl"
+                className="w-full h-48 object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110 filter saturate-150 contrast-125"
+                style={{
+                  filter: 'saturate(150%) contrast(125%) brightness(110%) drop-shadow(0 10px 20px rgba(0,0,0,0.3))',
+                }}
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-pink-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
             </div>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">
               Your Love Story Awaits
@@ -64,13 +69,18 @@ const Index = () => {
           </div>
 
           {/* Journey Card */}
-          <div className="backdrop-blur-lg bg-white/30 rounded-3xl p-8 shadow-xl border border-white/20 hover:transform hover:scale-105 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="mb-6">
+          <div className="backdrop-blur-lg bg-white/30 rounded-3xl p-8 shadow-xl border border-white/20 hover:transform hover:scale-105 transition-all duration-300 animate-fade-in group" style={{ animationDelay: '0.2s' }}>
+            <div className="mb-6 relative overflow-hidden rounded-2xl">
               <img
                 src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop"
                 alt="Cozy moments"
-                className="w-full h-48 object-cover rounded-2xl"
+                className="w-full h-48 object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110 filter saturate-150 contrast-125"
+                style={{
+                  filter: 'saturate(150%) contrast(125%) brightness(110%) drop-shadow(0 10px 20px rgba(0,0,0,0.3))',
+                }}
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-rose-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
             </div>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">
               Journey Together
